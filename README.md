@@ -1,3 +1,6 @@
+python3 -m autograder.run.submit --user $EMAIL --pass $PASSWORD Ass*
+
+
 # Assignments
 These are the assignments for CSE240 at UCSC.  They are:
 - [Assignment1](Assignment1/)
