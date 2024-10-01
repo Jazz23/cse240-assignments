@@ -1,5 +1,41 @@
-python3 -m autograder.run.submit --user $EMAIL --pass $PASSWORD Ass*
+# For anyone who wants to use a Devcontainer/GitHub Codespace
 
+> This repo is to help those struggling with setup on their local machines. This repo automatically installs autograder and python for you, without needing to install anything (besides docker) on your local machine. You can also setup a "GitHub Codespace" which is a devcontainer in the cloud, which literally only requires **a browser** to connect to (you can also connect via a local VSCode instance).
+
+> Start by clicking **"Use this template > Create new repository"** to make a *copy* of this repo to your personal account. Don't forget to mark visibility as private. 
+
+
+### For local dev container (docker required):
+* Make sure VSCode has the "Dev Containers" extension installed.<br>
+* After cloning **your _private_ repo copy** to your local machine, create a `.env` file in the root of the repo that looks like<br>
+> EMAIL=youremail@ucsc.edu<br>
+> PASSWORD=yourpasswordyougotemailed<br>
+
+* *After* you've made your `.env` file, re-open the folder in the dev container (either by the popup or VSCode command)
+
+### For GitHub Codespace (free remote dev container in cloud):
+
+* Edit the file `.devcontainer/devcontainer.json` on GitHub.com. Remove `--run-args` section of `.devcontainer.json`.
+* Open repository settings
+* Near the bottom, click **Secrets and Variables > Codespaces** and add<br>
+> EMAIL=youremail@ucsc.edu<br>
+> PASSWORD=yourpasswordyougotemailed<br>
+* Go back to the main page on the repo, click **Code -> Codespaces -> Create codespace on main**
+* You will get a warning once in the codespace, just ignore it
+
+## Once you've setup your devcontainer/codespace, use the following pattern for autograder commands:
+
+> python3 -m autograder.run.submit --user $EMAIL --pass $PASSWORD <AssignmentPath.ipynb>
+
+Happy coding!
+
+(P.S. if all that setup is a pain, just hard code your credentials in `config.json` and skip all the env stuff :D)
+
+
+<br>
+<br>
+<br>
+<br>
 
 # Assignments
 These are the assignments for CSE240 at UCSC.  They are:
